@@ -7,7 +7,7 @@ const AddExercises = () => {
         <div>
             <AppButton label='Add Exercise' />
             <div>
-                <AppInput label='Add Exercise' />
+                <AppInput size="small" defaultValue='Add Exercise' />
             </div>
         </div>
     )

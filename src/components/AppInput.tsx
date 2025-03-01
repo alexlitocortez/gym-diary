@@ -2,22 +2,21 @@ import React from "react"
 import { Input } from 'antd'
 
 interface AppInputProps {
-    label?: string;
-    type?: "textarea";
+    defaultValue?: string;
+    size: "large" | "middle" | "small";
     value?: string;
+    className?: string;
     onChange?: () => void;
 }
 
 const AppInput: React.FC<AppInputProps> = ({
-    label = "Insert Exercise",
-    type = "textarea",
-    value = "string",
+    defaultValue = "Insert Exercise",
+    size = "",
+    value = "",
+    className = "",
     onChange,
 }) => (
-    <Input.TextArea value={value} onChange={onChange}>
-        {label}
-    </Input.TextArea>
-
+    <Input defaultValue={defaultValue} size={"small"} value={value} onChange={onChange} className={`p-2 border rounded max-w-1/10 ${className}`} />
 )
 
 export default AppInput
