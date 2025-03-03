@@ -9,7 +9,7 @@ const headerStyle: React.CSSProperties = {
     height: 64,
     paddingInline: 48,
     lineHeight: '64px',
-    backgroundColor: '#E2E2E2'
+    backgroundColor: '#B19CD9'
 };
 
 const contentStyle: React.CSSProperties = {
@@ -17,21 +17,14 @@ const contentStyle: React.CSSProperties = {
     maxHeight: '100%',
     lineHeight: '120px',
     color: '#fff',
-    backgroundColor: '#E2E2E2'
-};
-
-const siderStyle: React.CSSProperties = {
-    textAlign: 'center',
-    lineHeight: '120px',
-    color: '#fff',
-    backgroundColor: '#1677ff',
+    backgroundColor: '#B19CD9'
 };
 
 const footerStyle: React.CSSProperties = {
     maxHeight: '100%',
     textAlign: 'center',
     color: '#fff',
-    backgroundColor: '#E2E2E2'
+    backgroundColor: '#B19CD9'
 };
 
 const layoutStyle = {
@@ -48,7 +41,7 @@ interface AppLayoutProps {
 const AppLayout: React.FC<AppLayoutProps> = ({ children }) => (
     <Flex gap="middle" wrap>
         <Layout style={layoutStyle}>
-            <Header style={headerStyle}>Header</Header>
+            <Header style={headerStyle}>Gym Diary</Header>
             <Content style={contentStyle}>{children}</Content>
             <Footer style={footerStyle}>Footer</Footer>
         </Layout>

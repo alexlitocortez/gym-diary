@@ -4,19 +4,27 @@ import { Input } from 'antd'
 interface AppInputProps {
     defaultValue?: string;
     size: "large" | "middle" | "small";
-    value?: string;
     className?: string;
-    onChange?: () => void;
+    style?: React.CSSProperties; // Allows inline CSS
+    value?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const AppInput: React.FC<AppInputProps> = ({
     defaultValue = "Insert Exercise",
     size = "",
-    value = "",
     className = "",
+    style = {},
+    value = "",
     onChange,
 }) => (
-    <Input defaultValue={defaultValue} size={"small"} value={value} onChange={onChange} className={`p-2 border rounded max-w-1/10 ${className}`} />
+    <Input
+        defaultValue={defaultValue}
+        value={value}
+        onChange={onChange}
+        className={`w-auto ${className}`}
+        style={{ width: 'auto', ...style }}
+    />
 )
 
 export default AppInput

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { HtmlHTMLAttributes, useState } from 'react';
 import { Button } from 'antd';
 
 interface AppButtonProps {
     label?: string;
     type?: "primary" | "default" | "dashed" | "link" | "text";
     className?: string;
-    onClick?: () => void;
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const AppButton: React.FC<AppButtonProps> = ({
