@@ -16,6 +16,7 @@ const muscleGroups = [
     'Legs', 'Abs', 'Neck', 'Forearms'
 ];
 
+
 const MuscleSections: React.FC<MuscleSectionsProps> = ({ exercises }) => {
     return (
         <>

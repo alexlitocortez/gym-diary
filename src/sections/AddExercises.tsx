@@ -21,7 +21,7 @@ const AddExercises = () => {
     const [exercises, setExercises] = useState<Exercise[]>([]);
 
     const addButton = () => {
-        if (exerciseName.trim() || !selectedMuscle) return;
+        if (!exerciseName.trim() || !selectedMuscle) return;
 
         setExercises([...exercises, { name: exerciseName, muscleGroup: selectedMuscle }]);
         setExerciseName('');
