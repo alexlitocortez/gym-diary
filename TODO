@@ -4,6 +4,7 @@
 
 
 //TODO next
+// Create backend with FastAPI for authentication
 // exercise doesn't dynamically show on list
 // Add date for progress next to each exercise in card
 // Authentication

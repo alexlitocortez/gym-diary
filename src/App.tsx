@@ -4,13 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import AddExercises from './sections/AddExercises'
 import AppLayout from './components/AppLayout'
+import Login from './pages/Login'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <AppLayout>
-      <AddExercises />
+      <Login />
+      {/* <AddExercises /> */}
     </AppLayout>
   )
 }

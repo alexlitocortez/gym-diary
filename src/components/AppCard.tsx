@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { Card } from "antd"
+import { Card, Space } from "antd"
 
 interface Exercise {
     name: string;
@@ -21,22 +21,24 @@ const AppCard: React.FC<AppCardProps> = ({
     hoverable = false,
     exercises = []
 }) => (
-    <Card
-        size={size}
-        hoverable={hoverable}
-        className="transition-all duration-300 ease-in-out hover:shadow-lg"
-    >
-        <h3 className="font-bold">{title}</h3>
-        <ul className="mt-2 text-sm text-gray-500">
-            {exercises.length > 0 ? (
-                exercises.map((ex, idx) => (
-                    <li key={idx} className="text-white">- {ex.name}</li>
-                ))
-            ) : (
-                <p className="text-gray-500">No exercises added</p>
-            )}
-        </ul>
-    </Card>
+    <Space direction="vertical" size={18}>
+        <Card
+            size={size}
+            hoverable={hoverable}
+            className="transition-all duration-300 ease-in-out hover:shadow-lg"
+        >
+            <h3 className="font-bold">{title}</h3>
+            <ul className="mt-2 text-sm text-gray-500">
+                {exercises.length > 0 ? (
+                    exercises.map((ex, idx) => (
+                        <li key={idx} className="text-white">{ex.name}</li>
+                    ))
+                ) : (
+                    null
+                )}
+            </ul>
+        </Card>
+    </Space>
 )
 
 export default AppCard;
