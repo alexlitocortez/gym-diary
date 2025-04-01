@@ -1,11 +1,9 @@
-import React from 'react'
-import AppInput from '../components/AppInput'
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
 
-import { Card, Space } from "antd"
+import { Card } from "antd"
 
-import { Flex, Layout } from 'antd';
+import { Flex } from 'antd';
 
 type FieldType = {
     username?: string;

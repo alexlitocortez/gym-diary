@@ -5,13 +5,15 @@ import './App.css'
 import AddExercises from './sections/AddExercises'
 import AppLayout from './components/AppLayout'
 import Login from './pages/Login'
+import Register from './pages/Register'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <AppLayout>
-      <Login />
+      <Register />
+      {/* <Login /> */}
       {/* <AddExercises /> */}
     </AppLayout>
   )
